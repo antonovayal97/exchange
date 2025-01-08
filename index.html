@@ -18,27 +18,27 @@
     </header>
     <main id="main">
       <div class="container flex justify-center p-4">
-        <div class="main-card bg-white p-4 rounded-2xl shadow-xl w-full border-solid border border-black-400">
+        <div class="main-card bg-white p-4 rounded-2xl w-full">
           <div class="text-center mb-4"><span>Курс таиского бата<br> на 09.01.2025 12:20<br> от 3.21 рублей</span></div>
           <div>
             <div class="mb-2">
               <label for="exchangeInput">Сколько нужно поменять?</label>
             </div>
             <div class="flex items-center gap-2">
-              <input class="w-full border-solid border border-black-400 rounded-lg p-1 px-3" type="text" name="exchangeInput" id="exchangeInput"><span>руб.</span>
+              <input class="w-full border-solid border rounded-lg p-1 px-3" type="text" name="exchangeInput" id="exchangeInput"><span>руб.</span>
             </div>
             <div class="mt-3">
-              <button class="c-button p-2 bg-violet-400 text-white w-full rounded-lg text-lg font-bold">Рассчитать</button>
+              <button class="c-button p-2 w-full rounded-lg text-lg font-bold">Рассчитать</button>
             </div>
           </div>
         </div>
       </div>
     </main>
-    <footer class="w-full p-3 bg-white fixed bottom-0 left-0 z-10 border-solid border-t border-black-400">
-      <div class="flex gap-1 justify-around"><a class="p-2 flex flex-col items-center text-slate-500 nav-link" href="./" hx-get="./" hx-target="#main" hx-push-url="true" hx-select="#main &gt; *">
+    <footer class="w-full p-3 fixed bottom-0 left-0 z-10">
+      <div class="flex gap-1 justify-around"><a class="p-2 flex flex-col items-center nav-link" href="./" hx-get="./" hx-target="#main" hx-push-url="true" hx-select="#main &gt; *">
           <svg class="icon size-xm">
             <use href="./img/svg/sprite.svg#baht" xlink:href="./img/svg/sprite.svg#baht"></use>
-          </svg><span>Обменять</span></a><a class="p-2 flex flex-col items-center text-slate-500 nav-link" href="./question.html" hx-get="./question.html" hx-target="#main" hx-push-url="true" hx-select="#main &gt; *">
+          </svg><span>Обменять</span></a><a class="p-2 flex flex-col items-center nav-link" href="./question.html" hx-get="./question.html" hx-target="#main" hx-push-url="true" hx-select="#main &gt; *">
           <svg class="icon size-xm">
             <use href="./img/svg/sprite.svg#question" xlink:href="./img/svg/sprite.svg#question"></use>
           </svg><span>Задать вопрос</span></a></div>
