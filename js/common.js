@@ -5,13 +5,15 @@ document.addEventListener("DOMContentLoaded",(event) => {
 
     function focusOut()
     {
-        document.addEventListener('click', function (e) {
-            const input = document.querySelector('input'); // Убедитесь, что ваш инпут правильно выбран
-            if (input && !input.contains(e.target)) {
-                input.blur(); // Снимает фокус с инпута
-                console.log("focusOut");
+        document.addEventListener('click', (event) => {
+            const tags = ['INPUT', 'TEXTAREA']
+            const focused = document.activeElement
+            console.log(focused.tagName)
+          
+            if (focused && focused !== event.target && tags.includes(focused.tagName)) {
+              focused.blur()
             }
-        });
+          })
     }
 
     function initMasks()
