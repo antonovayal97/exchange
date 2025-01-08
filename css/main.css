@@ -703,6 +703,7 @@ footer {
 
 .main-card {
   background-color: var(--tg-theme-section-bg-color);
+  border: 1px solid var(--tg-theme-section-separator-color);
 }
 
 #exchangeInput {
