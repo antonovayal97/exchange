@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded",(event) => {
         
         // Находим ссылку, которая соответствует текущему URL
         const currentLink = Array.from(document.querySelectorAll('.nav-link'))
-        .find(link => link.getAttribute('href') === window.location.pathname);
+        .find(link => window.location.pathname.startsWith(link.getAttribute('href')));
 
         // Добавляем класс active для текущей ссылки
         if (currentLink) {
