@@ -20,15 +20,19 @@ document.addEventListener("DOMContentLoaded",(event) => {
 
     function initMasks()
     {
-        IMask(
-            document.getElementById('exchangeInput'),
-            {
-              mask: Number,
-              min: 1,
-              max: 100000000,
-              thousandsSeparator: ' '
-            }
-          )
+        var exchangeInput = document.querySelector("#exchangeInput");
+        if(exchangeInput)
+        {
+            IMask(
+                document.getElementById('exchangeInput'),
+                {
+                  mask: Number,
+                  min: 1,
+                  max: 100000000,
+                  thousandsSeparator: ' '
+                }
+              )
+        }
     }
     function initBottomTabs()
     {
