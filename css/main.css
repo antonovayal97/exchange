@@ -576,6 +576,10 @@ video {
   width: 128px;
   height: 128px;
 }
+.size-s {
+  width: 24px;
+  height: 24px;
+}
 .w-full {
   width: 100%;
 }
@@ -609,12 +613,6 @@ video {
 .rounded-lg {
   border-radius: 0.5rem;
 }
-.border {
-  border-width: 1px;
-}
-.border-solid {
-  border-style: solid;
-}
 .bg-red-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(252 165 165 / var(--tw-bg-opacity, 1));
@@ -645,6 +643,10 @@ video {
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 .font-bold {
   font-weight: 700;
@@ -709,6 +711,10 @@ footer {
 
 #exchangeInput {
   background-color: var(--tg-theme-section-separator-color);
+}
+
+#exchangeInput ~ span {
+  color: var(--tg-theme-subtitle-text-color);
 }
 
 .nav-link.active {
