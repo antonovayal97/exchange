@@ -708,6 +708,7 @@ footer {
 
 #exchangeInput {
   border: 1px solid var(--tg-theme-section-separator-color);
+  background-color: transparent;
 }
 
 #exchangeInput ~ span {
