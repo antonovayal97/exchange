@@ -568,17 +568,13 @@ video {
 .hidden {
   display: none;
 }
-.size-xm {
-  width: 32px;
-  height: 32px;
+.size-s {
+  width: 24px;
+  height: 24px;
 }
 .size-xxl {
   width: 128px;
   height: 128px;
-}
-.size-s {
-  width: 24px;
-  height: 24px;
 }
 .w-full {
   width: 100%;
@@ -717,6 +713,10 @@ footer {
   color: var(--tg-theme-subtitle-text-color);
 }
 
+.nav-link {
+  opacity: 0.6;
+}
+
 .nav-link.active {
-  color: rgb(147, 51, 234);
+  opacity: 1;
 }

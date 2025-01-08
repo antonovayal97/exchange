@@ -2,21 +2,7 @@ document.addEventListener("DOMContentLoaded",(event) => {
     const body = document.querySelector("body");
     const header = document.querySelector("header");
 
-    
-    function checkActiveTab()
-    {
-        // Убираем класс active со всех ссылок
-        document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-        
-        // Находим ссылку, которая соответствует текущему URL
-        const currentLink = Array.from(document.querySelectorAll('.nav-link'))
-        .find(link => window.location.pathname.startsWith(link.getAttribute('href')));
 
-        // Добавляем класс active для текущей ссылки
-        if (currentLink) {
-        currentLink.classList.add('active');
-        }
-    }
 
     function initMasks()
     {
@@ -30,12 +16,27 @@ document.addEventListener("DOMContentLoaded",(event) => {
             }
           )
     }
-
+    function initBottomTabs()
+    {
+        var navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach((link) => {
+            link.addEventListener("click", (event) => {
+                navLinks.forEach((subLink) => {
+                    subLink.classList.remove("active");
+                });
+                link.classList.add("active");
+            })
+        })
+    }
+    function reInit()
+    {
+        initMasks();
+    }
     function init()
     {
-        checkActiveTab();
+        initBottomTabs();
         initMasks();
-        document.addEventListener('htmx:afterRequest', checkActiveTab);
+        document.addEventListener('htmx:afterRequest', reInit);
     }
 
     init();
