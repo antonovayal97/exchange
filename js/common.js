@@ -3,6 +3,16 @@ document.addEventListener("DOMContentLoaded",(event) => {
     const header = document.querySelector("header");
 
 
+    function focusOut()
+    {
+        document.addEventListener('click', function (e) {
+            const input = document.querySelector('input'); // Убедитесь, что ваш инпут правильно выбран
+            if (input && !input.contains(e.target)) {
+                input.blur(); // Снимает фокус с инпута
+                console.log("focusOut");
+            }
+        });
+    }
 
     function initMasks()
     {
@@ -36,6 +46,7 @@ document.addEventListener("DOMContentLoaded",(event) => {
     {
         initBottomTabs();
         initMasks();
+        focusOut();
         document.addEventListener('htmx:afterRequest', reInit);
     }
 
