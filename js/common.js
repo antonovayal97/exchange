@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded",(event) => {
                     subLink.classList.remove("active");
                 });
 
-                Telegram.HapticFeedback.impactOccurred("medium");
+                Telegram.WebApp.HapticFeedback.impactOccurred("medium");
 
                 
 
