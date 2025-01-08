@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded",(event) => {
           })
     }
 
+
+
     function initMasks()
     {
         IMask(
@@ -36,6 +38,12 @@ document.addEventListener("DOMContentLoaded",(event) => {
                 navLinks.forEach((subLink) => {
                     subLink.classList.remove("active");
                 });
+
+                Telegram.HapticFeedback.impactOccurred("medium");
+
+                
+
+
                 link.classList.add("active");
             })
         })
