@@ -42,12 +42,7 @@ document.addEventListener("DOMContentLoaded",(event) => {
                 navLinks.forEach((subLink) => {
                     subLink.classList.remove("active");
                 });
-
                 Telegram.WebApp.HapticFeedback.impactOccurred("medium");
-
-                
-
-
                 link.classList.add("active");
             })
         })
@@ -62,6 +57,15 @@ document.addEventListener("DOMContentLoaded",(event) => {
         initMasks();
         focusOut();
         document.addEventListener('htmx:afterRequest', reInit);
+        document.addEventListener('htmx:configRequest', function (event){
+            if (event.detail && event.detail.elt) {
+                const trigger = event.detail.elt; // Элемент, вызвавший запрос
+                if (trigger.classList.contains('active')) {
+                  // Отменяем HTMX запрос
+                  event.preventDefault();
+                }
+              }
+        });
     }
 
     init();

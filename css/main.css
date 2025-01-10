@@ -609,6 +609,9 @@ video {
 .rounded-lg {
   border-radius: 0.5rem;
 }
+.rounded-xl {
+  border-radius: 0.75rem;
+}
 .bg-red-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(252 165 165 / var(--tw-bg-opacity, 1));
@@ -652,11 +655,6 @@ video {
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.shadow-2xl {
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
 .blur {
   --tw-blur: blur(8px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -688,35 +686,36 @@ body {
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
   font-style: normal;
-  background-color: var(--tg-theme-bg-color);
-  color: var(--tg-theme-text-color);
+  background-color: var(--tg-theme-bg-color, #fff);
+  color: var(--tg-theme-text-color, #333);
 }
 
 footer {
-  background-color: var(--tg-theme-section-bg-color);
+  background-color: var(--tg-theme-section-bg-color, #eee);
 }
 
 .c-button {
-  background-color: var(--tg-theme-button-color);
-  color: var(--tg-theme-button-text-color);
+  background-color: var(--tg-theme-button-color, #03e);
+  color: var(--tg-theme-button-text-color, #fff);
 }
 
 .main-card {
-  background-color: var(--tg-theme-section-bg-color);
-  border: 1px solid var(--tg-theme-section-separator-color);
+  background-color: var(--tg-theme-section-bg-color, #eee);
+  border: 1px solid var(--tg-theme-section-separator-color, #858585);
 }
 
 #exchangeInput {
-  border: 1px solid var(--tg-theme-section-separator-color);
+  border: 1px solid var(--tg-theme-section-separator-color, #858585);
   background-color: transparent;
 }
 
 #exchangeInput ~ span {
-  color: var(--tg-theme-subtitle-text-color);
+  color: var(--tg-theme-subtitle-text-color, #999);
 }
 
 .nav-link {
   opacity: 0.6;
+  flex: 1;
 }
 
 .nav-link.active {
