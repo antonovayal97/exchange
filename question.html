@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css?asdqwe">
   </head>
-  <body>
+  <body class="text-base">
     <header class="flex justify-center p-4">
       <div class="size-xxl bg-red-300"><img src="https://placehold.co/320x320.png" alt="logo"></div>
     </header>
@@ -23,18 +23,16 @@
         </div>
       </div>
     </main>
-    <footer class="w-full p-3 fixed bottom-0 left-0 z-10">
-      <div class="flex gap-1 justify-around text-sm"><a class="p-2 flex flex-col items-center nav-link active" href="./" hx-get="./" hx-target="#main" hx-push-url="true" hx-select="#main &gt; *">
-          <svg class="icon size-s">
-            <use href="./img/svg/sprite.svg#baht" xlink:href="./img/svg/sprite.svg#baht"></use>
-          </svg><span>Обменять</span></a><a class="p-2 flex flex-col items-center nav-link" href="./info.html" hx-get="./info.html" hx-target="#main" hx-push-url="true" hx-select="#main &gt; *">
-          <svg class="icon size-s">
-            <use href="./img/svg/sprite.svg#info" xlink:href="./img/svg/sprite.svg#info"></use>
-          </svg><span>Правила</span></a><a class="p-2 flex flex-col items-center nav-link" href="./question.html" hx-get="./question.html" hx-target="#main" hx-push-url="true" hx-select="#main &gt; *">
-          <svg class="icon size-s">
-            <use href="./img/svg/sprite.svg#question" xlink:href="./img/svg/sprite.svg#question"></use>
-          </svg><span>ЧаВо</span></a></div>
-    </footer>
+    <footer class="btm-nav w-full fixed bottom-0 left-0 z-10"><a class="nav-link active" href="./" hx-get="./" hx-target="#main" hx-push-url="true" hx-select="#main &gt; *">
+        <svg class="icon size-s">
+          <use href="./img/svg/sprite.svg#baht" xlink:href="./img/svg/sprite.svg#baht"></use>
+        </svg><span class="btm-nav-label">Обменять</span></a><a class="nav-link" href="./info.html" hx-get="./info.html" hx-target="#main" hx-push-url="true" hx-select="#main &gt; *">
+        <svg class="icon size-s">
+          <use href="./img/svg/sprite.svg#info" xlink:href="./img/svg/sprite.svg#info"></use>
+        </svg><span class="btm-nav-label">Правила</span></a><a class="nav-link" href="./question.html" hx-get="./question.html" hx-target="#main" hx-push-url="true" hx-select="#main &gt; *">
+        <svg class="icon size-s">
+          <use href="./img/svg/sprite.svg#question" xlink:href="./img/svg/sprite.svg#question"></use>
+        </svg><span class="btm-nav-label">ЧаВо</span></a></footer>
     <script src="js/common.js"></script>
   </body>
 </html>

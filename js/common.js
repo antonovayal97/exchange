@@ -3,6 +3,13 @@ document.addEventListener("DOMContentLoaded",(event) => {
     const header = document.querySelector("header");
 
 
+    function checkTheme()
+    {
+        const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (isDarkMode) {
+            body.dataset.theme = "dark";
+        } 
+    }
     function focusOut()
     {
         document.addEventListener('click', (event) => {
@@ -53,6 +60,7 @@ document.addEventListener("DOMContentLoaded",(event) => {
     }
     function init()
     {
+        checkTheme();
         initBottomTabs();
         initMasks();
         focusOut();
