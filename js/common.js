@@ -6,14 +6,21 @@ document.addEventListener("DOMContentLoaded",(event) => {
 
     function checkTheme()
     {
-        const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (isDarkMode) {
-            html.dataset.theme = "dark";
-        } 
-        else
+        var theme_controllers = document.querySelectorAll(".theme-controller");
+
+        if(window.Telegram.WebApp.colorScheme == "light")
         {
             html.dataset.theme = "light";
+            theme_controllers.forEach((controller) => {
+                controller.value = "dark";
+            })
+            return;
         }
+        html.dataset.theme = "dark";
+
+        theme_controllers.forEach((controller) => {
+            controller.value = "light";
+        })
     }
     function focusOut()
     {
