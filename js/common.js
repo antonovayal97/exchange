@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded",(event) => {
+    const html = document.querySelector("html");
     const body = document.querySelector("body");
     const header = document.querySelector("header");
 
@@ -7,7 +8,7 @@ document.addEventListener("DOMContentLoaded",(event) => {
     {
         const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (isDarkMode) {
-            body.dataset.theme = "dark";
+            html.dataset.theme = "dark";
         } 
     }
     function focusOut()
