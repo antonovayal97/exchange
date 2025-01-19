@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded",(event) => {
         if (isDarkMode) {
             html.dataset.theme = "dark";
         } 
+        else
+        {
+            html.dataset.theme = "light";
+        }
     }
     function focusOut()
     {
