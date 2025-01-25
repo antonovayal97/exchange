@@ -2172,13 +2172,13 @@ html {
   width: 24px;
   height: 24px;
 }
-.size-xxl {
-  width: 128px;
-  height: 128px;
-}
 .size-xm {
   width: 32px;
   height: 32px;
+}
+.size-xxl {
+  width: 128px;
+  height: 128px;
 }
 .w-full {
   width: 100%;

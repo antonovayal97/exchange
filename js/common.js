@@ -4,6 +4,11 @@ document.addEventListener("DOMContentLoaded",(event) => {
     const header = document.querySelector("header");
 
 
+    function initTelegramWebApp()
+    {
+        let telegramTest = document.querySelector("#telegramTest");
+        telegramTest.innerText = JSON.stringify(window.Telegram.WebApp.initDataUnsafe, null, 4);
+    }
     function checkTheme()
     {
         var theme_controllers = document.querySelectorAll(".theme-controller");
@@ -72,6 +77,7 @@ document.addEventListener("DOMContentLoaded",(event) => {
     }
     function init()
     {
+        initTelegramWebApp();
         checkTheme();
         initBottomTabs();
         initMasks();
