@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded",(event) => {
     function initTelegramWebApp()
     {
         let telegramTest = document.querySelector("#telegramTest");
-        telegramTest.innerText = JSON.stringify(window.Telegram.WebApp.initDataUnsafe, null, 4);
+        telegramTest.innerText = JSON.stringify(window.Telegram.WebApp.initData, null, 4);
 
-        fetch("http://telegrambot24.tw1.ru/auth/telegram", {
+        /*fetch("http://telegrambot24.tw1.ru/auth/telegram", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded",(event) => {
         })
             .then(response => response.json())
             .then(data => telegramTest.innerText = JSON.stringify(data, null, 4))
-            .catch(error => telegramTest.innerText = JSON.stringify(error, null, 4));
+            .catch(error => telegramTest.innerText = JSON.stringify(error, null, 4));*/
     }
     function checkTheme()
     {
